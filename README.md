@@ -1,96 +1,63 @@
-# HomeStays
+# 🎉 Welcome to Eventora
 
-## Overview
+**Eventora** is a full-stack event management platform built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It connects clients with vendors for informal events such as weddings, birthdays, engagements, and more. Clients can book services, manage events, and receive personalized recommendations powered by machine learning.
 
-This project is a full-stack web application developed using MERN stack (MongoDB, Express.js, React.js, Node.js). It provides the core functionality of a hotel booking website like aibnb or similar, allowing users to browse for accommodations, view details, make bookings, and manage their listings.
+This project is being developed as a **final-year academic submission** with real-world deployment goals and startup potential.
 
-## Getting Started
+---
 
-1. **Clone the Repository:**
+## 🔧 Technologies
 
-   ```bash
-   git clone https://github.com/sonuyaduvanshi55/Eventora.git
+- **MongoDB** – NoSQL database for storing users, services, and events
+- **Express.js** – Backend framework for building RESTful APIs
+- **React.js** – Frontend library for building interactive UIs
+- **Node.js** – Runtime environment for server-side JavaScript
+- **JWT & bcrypt** – Secure authentication and password hashing
+- **AWS S3** – Cloud storage for service images
+- **Google OAuth** – Social login integration
+- **Tailwind CSS** – Utility-first CSS framework for responsive design
+- **EmailJS** – Email notifications for bookings and updates
 
-   ```
+---
 
-2. **Install dependencies:**
+## 🚀 Features
 
-   Navigate to client directory and install frontend dependencies using npm
+- **Role-Based Authentication**
+  - Clients, vendors, coordinators, and admins
+  - Login via email/password or Google OAuth
 
-   ```
-   npm install
-   ```
+- **Vendor Service Listings**
+  - Vendors can create, update, and delete services
+  - Clients can browse and filter services by category, price, and location
 
-   Similary navigate to api folder and install backend dependencies
+- **Event Booking**
+  - Clients select event type, date, budget, and services
+  - Virtual and physical coordinators manage event execution
 
-   ```
-   npm install
-   ```
+- **Image Uploads**
+  - Upload service photos via file or link
+  - Stored securely on AWS S3
 
-3. **ENV variables:**
+- **Booking Management**
+  - Clients can view and update bookings
+  - Vendors and coordinators track assigned events
 
-   - create .env file in the client folder and add these variables
+- **Machine Learning (Coming Soon)**
+  - Vendor recommendation engine
+  - Budget-based package suggestions
 
-     #### VITE_BASE_URL= http://localhost:4000
-     #### VITE_GOOGLE_CLIENT_ID= your google auth client id
+---
 
-   - create .env file in the api folder and add these variables
+## 📦 Deployment Plan
 
-     #### PORT= port number
+| Layer      | Platform        |
+|------------|-----------------|
+| Frontend   | Vercel          |
+| Backend    | Render / Heroku |
+| Database   | MongoDB Atlas   |
+| Storage    | AWS S3          |
 
-     #### MONGO_URL= your db url
+---
 
-     #### JWT_SECRET= your secret (string)
+## 🧭 Architecture Overview
 
-     #### BUCKET_NAME = your S3 bucket name
-
-     #### S3_ACCESS_KEY = your S3 bucket key
-
-     #### CS3_SECRET_ACCESS_KEY = your S3 bucket secret access key
-
-     #### CLIENT_URL= http://localhost:5173
-
-4. **Run project:**
-   - Open terminal, navigate to client directory and run below command to start frontend
-   ```
-       npm run dev
-   ```
-   - Open another terminal, navigate to api directory and run this command to start backend server
-   ```
-       nodemon index.js
-   ```
-
-## Features
-
-- **User Authentication:** Users can sign up, log in, and log out securely through google or email. Passwords are hashed for security.
-
-- **View Listings:** Users can search and view detailed information about each accommodation, including photos, descriptions, amenities.
-
-- **Make Bookings:** Authenticated users can book accommodations for specific dates and get instant confirmation through their emails.
-
-- **Manage Listings:** Hosts can create, edit, and remove their listings and get emails after bookings on their hosted places.
-
-- **Responsive Design:** The application is designed to be responsive and work seamlessly across different devices.
-
-## Technologies Used
-
-- **MongoDB:** NoSQL database for storing user data, listings.
-- **Express.js:** Web application framework for building the backend server.
-- **React.js:** JavaScript library for building the user interface.
-- **Node.js:** JavaScript runtime environment for executing server-side code.
-- **Tailwind CSS:** A utility-first CSS framework
-- **JWT:** JSON Web Tokens for secure user authentication.
-- **AWS S3:** Cloud-based image management for storing and serving images.
-- **google-outh** For login or signup through google.
-- **emailjs** To Send emails to both visitors and hosts on bookings.
-
-## Future Scope
-
-- To add payment gateway that ensures transaction in indian currency and provide a seamless experience while booking a place.
-
-
-## 💥 Issues
-
-For major changes, you are welcome to [open an issue](https://github.com/EddieHubCommunity/LinkFree/issues/new/choose) about what you would like to contribute. Enhancements are always encouraged and appreciated.
-# Eventora
-# Eventora
