@@ -9,7 +9,7 @@ const app = express();
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors({
     credentials: true,
@@ -20,11 +20,14 @@ app.use(cookieParser());
 
 connectWithDB();
 
-app.use("", router);
+app.use("/api", router);
 
-app.listen(PORT, (err) => {
-    if(err)
-       console.log("Error connecting to server" + err);
-    else
-       console.log('Listening on PORT:' + PORT);
-})
+app.listen(PORT, () => {
+    console.log(`✅ Server running on http://localhost:${PORT}`);
+  }).on('error', (err) => {
+    console.error('❌ Server failed to start:', err);
+  });
+
+  app.get("/", (req, res) => {
+    res.send("✅ EVENTORA backend is running");
+  });
